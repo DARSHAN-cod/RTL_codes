@@ -1,0 +1,21 @@
+// Code your testbench here
+// or browse Examples
+module priority_encoder_4_2_tb;
+  reg [3:0]in;
+  wire sel;
+  wire[1:0]out;
+  
+  priority_encoder_4_2 uut (.in(in),.sel(sel),.out(out));
+  initial begin
+    $dumpvars(1);
+    $dumpfile("priority_encoder_4_2.vcd");
+    $monitor("Time=%0t | in=%b | out=%b", $time, in, out);
+    in = 4'b0000; #10;
+    in = 4'b0001; #10;
+    in = 4'b0010; #10;
+    in = 4'b0100; #10;
+    in = 4'b1000; #10;
+    $finish;
+  end
+endmodule
+
