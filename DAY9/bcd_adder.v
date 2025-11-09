@@ -5,7 +5,6 @@ module bcd_adder(
     output [3:0] sum,
     output       cout
 );
-
     wire [4:0] bin_sum;   // 5-bit sum from binary addition
     wire       correction; 
     wire [4:0] corrected_sum;
