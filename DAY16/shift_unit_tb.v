@@ -9,6 +9,8 @@ module shift_unit_tb;
     initial begin
         $dumpfile("shift_unit.vcd");
         $dumpvars(0, shift_unit_tb);
+        $monitor("TIME=%0t | mode=%b | data_in=%b | shift=%d | data_out=%b",
+                  $time, mode, data_in, shift, data_out);
         data_in   = 8'b0011_1100;  
         shift = 3;
         mode      = 2'b00;  // SLL
