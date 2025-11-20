@@ -1,5 +1,5 @@
 // Code your design here
-module seven_segment_decoder(
+module seven_segment(
   input  [3:0] bcd_in,
   output reg [6:0] seg_out     
 );
