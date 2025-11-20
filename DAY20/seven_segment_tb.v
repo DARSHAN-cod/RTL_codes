@@ -1,10 +1,10 @@
 // Code your testbench here
 // or browse Examples
-module seven_segment_decoder_tb;
+module seven_segment_tb;
   reg  [3:0] bcd_in;
   wire [6:0] seg_out;
 
-seven_segment_decoder dut (.bcd_in(bcd_in),.seg_out(seg_out));
+seven_segment uut (.bcd_in(bcd_in),.seg_out(seg_out));
 initial begin
   $display("Time  BCD  Segment");
   $monitor("%0t  %b  %b", $time, bcd_in, seg_out);
