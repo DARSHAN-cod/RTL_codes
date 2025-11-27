@@ -19,8 +19,6 @@ initial begin
     reset = 0;
     enable = 1;   #100;
     enable = 0;   #40;
-
-    $stop;
 end
 
 initial begin
